@@ -35,8 +35,16 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+                WebView myWebView = (WebView) findViewById(R.id.webview);
+                myWebView.setWebViewClient(new WebViewClient());
+                myWebView.loadUrl("http://www.adyuga.com/contact/");
+
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+
+
+
             }
         });
 
@@ -107,19 +115,30 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_HOME) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+            WebView myWebView = (WebView) findViewById(R.id.webview);
+            myWebView.setWebViewClient(new WebViewClient());
+            myWebView.loadUrl("http://www.adyuga.com");
+        } else if (id == R.id.nav_SERVICES) {
+            WebView myWebView = (WebView) findViewById(R.id.webview);
+            myWebView.setWebViewClient(new WebViewClient());
+            myWebView.loadUrl("http://www.adyuga.com/services/");
+        } else if (id == R.id.nav_PORTIFOLIO) {
+            WebView myWebView = (WebView) findViewById(R.id.webview);
+            myWebView.setWebViewClient(new WebViewClient());
+            myWebView.loadUrl("http://www.adyuga.com/portfolio/");
 
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        } else if (id == R.id.nav_ABOUT) {
+            WebView myWebView = (WebView) findViewById(R.id.webview);
+            myWebView.setWebViewClient(new WebViewClient());
+            myWebView.loadUrl("http://www.adyuga.com/about/");
         }
+//        else if (id == R.id.nav_share) {
+//
+//        } else if (id == R.id.nav_send) {
+//
+//        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -165,4 +184,3 @@ public class MainActivity extends AppCompatActivity
 }
 
         /* CHAKRI CODE END */
-
