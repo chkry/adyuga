@@ -133,6 +133,10 @@ public class MainActivity extends AppCompatActivity
             WebView myWebView = (WebView) findViewById(R.id.webview);
             myWebView.setWebViewClient(new WebViewClient());
             myWebView.loadUrl("http://www.adyuga.com/about/");
+        } else if (id == R.id.nav_CONTACT) {
+            WebView myWebView = (WebView) findViewById(R.id.webview);
+            myWebView.setWebViewClient(new WebViewClient());
+            myWebView.loadUrl("http://www.adyuga.com/contact/");
         }
 //        else if (id == R.id.nav_share) {
 //
